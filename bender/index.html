@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework</title>
+    <script src = "js/jq.js" ></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="area">
+        <div class="antena">
+            <div class="triangle"></div>
+            <div class="circle"></div>
+        </div>
+        <div class="eye-area">
+                <div class="eye-area-2">
+                    <div class="eye1">
+                        <div class="zrachok"></div>
+                    </div>
+                    <div class="eye2">
+                        <div class="zrachok"></div>
+                    </div>
+                </div>
+        </div>
+        <div class="mouse">
+                <div class="horizontal-line"></div>
+                <div class="horizontal-line"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line"></div>
+        </div>
+    </div>
+    <audio id="sound-link" preload="auto">
+        <source src="audio/Bender_ Bite my shiny metal ass.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        var soundLink = $("#sound-link")[0];
+        $(".area").mouseenter(function() {
+                soundLink.play();
+        });
+    </script>
+</body>
+</html>

@@ -99,6 +99,9 @@ body{
     background-color: #FF4242;
     transition: .25s;
 }
+.btn_area a{
+    color:white;
+}
 .btn_area:hover {
     text-align: center;
     background-color: transparent;
@@ -119,6 +122,7 @@ body{
     font-weight: bold;
     font-size: 35px;
     letter-spacing: 75px;
+    margin-left: 75px;
 }
 @keyframes jump {
     from,to{

@@ -667,7 +667,7 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 80px;
-   padding: 0;
+    padding: 0;
 }
 /*//OUR TEAM SECTION*/
 
@@ -694,6 +694,9 @@
     margin-bottom: 30px;
 
 }
+.form_area{
+    width: 420px;
+}
 .footer_information h5, .footer_information h6
 {
     font-family: OpenSans-Light;
@@ -715,7 +718,11 @@
 .footer_networks_img a {
     margin: 0 10px;
 }
+.email_area {
+    position: relative;
+}
 .email {
+    margin-left: -5px;
     position: relative;
     font-family: OpenSans-Light;
     font-size: 12px;
@@ -725,10 +732,6 @@
     color: #3F414A;
     background-color: transparent;
     padding:0 20px ;
-}
-
-.email_area {
-    position: relative;
 }
 .footer_information form img {
     position: absolute;

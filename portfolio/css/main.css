@@ -357,8 +357,10 @@
 .btn_wrap{
     display: flex;
     justify-content: center;
+    z-index: 3;
 }
 .btn_wrap a{
+     border:1px solid transparent;
     width: 130px;
     height: 40px;
     background-color: #f84444;
@@ -369,11 +371,22 @@
     font-size: 12px;
     font-family: 'Raleway-ExtraBold';
     margin-right: 19px;
+    transition: .3s;
 }
 .btn_wrap a:last-child{
     margin: 0;
     border: 2px solid #e6e6e6;
-    line-height: 36px;
+    background-color: transparent;
+    color: #818181;
+}
+.btn_wrap a:hover{
+    background-color: transparent;
+    border: 1px solid #f84444;
+    color:#818181;
+}
+.btn_wrap a:last-child:hover{
+    margin: 0;
+    border: 2px solid #f84444;
     background-color: transparent;
     color: #818181;
 }
@@ -422,6 +435,10 @@
     margin: 0 auto;
     padding: 15px 0 25px 0;
 }
+.project_s .btn_wrap a:nth-child(2){
+    height: 42px;
+    line-height: 38px;
+}
 /*SLIDER PROJECTS*/
 .project_slider{
     display: flex;
@@ -454,18 +471,17 @@
     transform-origin:0 50%;
     transform: scale(1.333);
     position: relative;
-    /*width: 600px;*/
-    /*height: 600px;*/
 }
-.active:before{
-    content:'';
+.play{
     position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: url("../img/projects/play.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+    scale(0.75);
+}
+.play:hover {
+    transform: translate(-50%, -50%)
+    scale(0.7);
 }
 .slide img{
     max-width: 100%;
@@ -517,12 +533,22 @@
     display: inline;
     margin-right: 20px;
 }
+.slide_number li a{
+  transition: .1s;
+}
+.slide_number li a:hover{
+    transition: .1s;
+        transform: scale(1.2);
+}
+.number a{
+    color:#d3d3d3;
+}
 .number{
     font-family: Raleway-Bold;
     font-size: 16px;
     color:#d3d3d3;
 }
-.active_number{
+.active_number a{
     color:#2c2e37;
 }
 .attend{
@@ -545,18 +571,14 @@
 /*BLOG SECTION*/
 .blog_section{
     position: relative;
-    background-color: #fafafa;
-    max-height: 680px;
-    margin-top: 205px;
-    z-index: -1;
-}
-.blog_section__wrap{
-    position: relative;
-    display: flex;
+    height: 680px;
     width: 100%;
-    flex-direction: column;
+    background-color: #fafafa;
+    margin-top: 205px;
 }
-
+.blog_section__content{
+    z-index: 12;
+}
 .blog_section__content img{
     margin-top: 210px;
     margin-bottom: 35px;
@@ -564,6 +586,7 @@
 
 .blog_section__content h3{
     margin-bottom: 10px;
+    margin-left: 0;
 }
 .blog_section__content p {
     width: 30%;
@@ -574,23 +597,26 @@
     align-items: left;
 }
 .blog_section__content .btn_wrap a{
-    border: none;
     margin-top:35px;
+    border:1px solid transparent;
     background-color: #f84444;
     line-height: 40px;
     color: #fff;
 }
+.blog_section__content .btn_wrap a:hover{
+    margin-top:35px;
+    border:1px solid #f84444;
+}
 .central_blog_img{
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 285px;
+    left:450px;
+    top: 289px;
+    z-index: 2;
 }
 .background_blog_img{
     position: absolute;
-    top: -86px;
-    right:-87px;
-    z-index: -1;
+    top: -85px;
+    right:0;
 }
 /*//BLOG SECTION*/
 
@@ -660,14 +686,24 @@
 }
 .team_networks img{
     margin: 40px 20px 70px 0;
+    transition: .1s;
 }
-
+.team_networks img:hover{
+    transform: scale(1.3);
+}
 .brands{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 80px;
     padding: 0;
+}
+.brands img{
+    transition: .2s;
+}
+.brands img:hover{
+    transition: .2s;
+    transform: scale(1.3);
 }
 /*//OUR TEAM SECTION*/
 
@@ -692,7 +728,24 @@
     color:white;
     text-align: left;
     margin-bottom: 30px;
-
+}
+.footer_information li a{
+    position: relative;
+}
+.footer_information li a:after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom:-2px;
+    transform: translateX(-50%);
+    width: 0;
+    height: 1px;
+    background-color: #fff;
+    transition: .5s;
+}
+.footer_information li:hover a:after{
+    content:'';
+    width: 100%;
 }
 .form_area{
     width: 420px;
@@ -716,7 +769,15 @@
     color: white;
 }
 .footer_networks_img a {
+    transition: .1s;
     margin: 0 10px;
+}
+.footer_networks_img img {
+    transition: .3s;
+}
+.footer_networks_img img:hover{
+    transform: scale(1.3);
+    transition: .3s;
 }
 .email_area {
     position: relative;
@@ -732,13 +793,15 @@
     color: #3F414A;
     background-color: transparent;
     padding:0 20px ;
+    outline: none;
 }
-.footer_information form img {
+.form_arrow{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     left: 320px;
     z-index: 3;
 }
+
 /*//FOOTER*/
 

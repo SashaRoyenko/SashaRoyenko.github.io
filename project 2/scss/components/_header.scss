@@ -1,0 +1,39 @@
+//body{
+//  height: 200vh;
+//}
+
+.header_s{
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 50px;
+  z-index: 999;
+}
+.header_wrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo{
+  font-size: 36px;
+  font-family: 'ProximaNova Bold';
+  color:black;
+  span:last-child{
+    font-family: "ProximaNova Lite";
+  }
+}
+.nav{
+    display: flex;
+    flex-direction: row;
+    max-width:430px;
+    width: 100%;
+  justify-content: space-between;
+     li{
+       font-family:"ProximaNova Regular";
+       font-size: 18px;
+         a{
+         color:black;
+       }
+     }
+}

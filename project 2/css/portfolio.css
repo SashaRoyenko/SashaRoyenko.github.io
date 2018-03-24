@@ -1,0 +1,20 @@
+.portfolio_s {
+  display: flex;
+  flex-wrap: nowrap; }
+  .portfolio_s div {
+    display: inline; }
+  .portfolio_s div:nth-child(2) {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .portfolio_s div:nth-child(2) img {
+      position: absolute; }
+    .portfolio_s div:nth-child(2) h5 {
+      font-family: "ProximaNova Bold";
+      font-size: 30px;
+      color: #fff; }
+    .portfolio_s div:nth-child(2) p {
+      font-family: "ProximaNova Lite";
+      font-size: 16px;
+      color: white; }

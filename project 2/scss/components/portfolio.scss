@@ -1,0 +1,36 @@
+.portfolio_s{
+  display: flex;
+  margin-top: 105px;
+  img{
+    width: 450px;
+    height: 100%;
+  }
+  div:nth-child(2)
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img{
+      position:absolute;
+      z-index: -1;
+    }
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+      h5{
+          font-family: "ProximaNova Bold";
+        font-size: 30px;
+        color: #fff;
+      }
+    p{
+        font-family: "ProximaNova Lite";
+        margin: 25px 0 40px 0;
+        font-size: 16px;
+        color:white;
+        text-align: center;
+        width: 80%;
+    }
+  }
+}

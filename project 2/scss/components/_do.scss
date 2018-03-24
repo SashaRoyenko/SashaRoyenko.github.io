@@ -1,0 +1,64 @@
+.what_we_do_s{
+  margin-top: 110px;
+  .what_we_do__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    h4 {
+      font-family: "ProximaNova Bold";
+      font-size: 48px;
+      color: black;
+    }
+    div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      article {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        h5 {
+          font-family: "ProximaNova Bold";
+          font-size: 30px;
+          color: black;
+          margin-bottom: 35px;
+        }
+        p {
+          font-family: "ProximaNova Lite";
+          font-size: 18px;
+          color: gray;
+          width: 80%;
+        }
+      }
+    }
+    img{
+      margin-right: 30px;
+    }
+    div:nth-child(2) {
+      margin: 120px 0 85px 0;
+      img:nth-child(1) {
+        width: 105px;
+        height: 95px;
+      }
+      img:nth-child(3) {
+        width: 136px;
+        height: 81px;
+      }
+    }
+    div:nth-child(3) {
+      img:nth-child(1) {
+        width: 107px;
+        height: 102px;
+      }
+      img:nth-child(3) {
+        width: 126px;
+        height: 98px;
+      }
+    }
+    .btn{
+      margin-top: 50px;
+      display: block;
+    }
+  }
+}

@@ -1,43 +1,46 @@
 .portfolio_s{
   display: flex;
   margin-top: 105px;
-  img{
-    width: 450px;
-    height: 100%;
-  }
-  //div:nth-child(1)
-  //{
-  //  background-image: url("../img/portfolio/project1.png");
-  //  background-repeat: no-repeat;
-  //  background-size: cover;
-  //  background-position: center;
-  //  width: 100%;
+  //img{
+  //  width: 450px;
+  //  height: 100%;
   //}
-  //div:nth-child(3)
-  //{
-  //  background-image: url("../img/portfolio/project3.png");
-  //  background-repeat: no-repeat;
-  //  background-size: cover;
-  //  background-position: center;
-  //  width: 100%;
-  //}
-  div:nth-child(2)
+  .portfolio_bg1
   {
+    background-image: url("../img/portfolio/project1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 350px;
+  }
+  .portfolio_bg3
+  {
+    background-image: url("../img/portfolio/project3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 350px;
+  }
+  .portfolio_bg2
+  {
+    background-image: url("../img/portfolio/project2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 350px;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    //background-image: url("../img/portfolio/project2.png");
-    //background-repeat: no-repeat;
-    //background-size: cover;
-    //background-position: center;
-    //width: 100%;
-    //z-index: -1;
-    img{
-      position:absolute;
-      z-index: -1;
-    }
-    position: relative;
+    z-index: 2;
+    //img{
+    //  position:absolute;
+    //  z-index: -1;
+    //}
       h5{
           font-family: "ProximaNova Bold";
         font-size: 30px;
@@ -51,5 +54,13 @@
         text-align: center;
         width: 80%;
     }
+  }
+  .portfolio_bg2:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0,0,0,0.6);
+    z-index: -1;
   }
 }

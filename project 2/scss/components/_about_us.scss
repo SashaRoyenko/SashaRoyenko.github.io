@@ -1,0 +1,55 @@
+.about_us_s{
+  background-image: url("../img/about us/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  .about_us_s__wrap{
+  display: flex;
+  justify-content: center;
+    flex-direction: column;
+    align-items: center;
+        h4{
+            margin-top:100px;
+            margin-bottom:30px;
+            font-family: "ProximaNova Bold";
+            color: #fff;
+            font-size: 48px;
+        }
+      p{
+        font-family: "ProximaNova Lite";
+        color: gray;
+        font-size: 18px;
+        text-align: center;
+        width:70%;
+        margin-bottom: 80px;
+      }
+    ul{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h5 {
+          margin-top: 10px;
+          margin-bottom: 10px;
+          font-family: "ProximaNova Bold";
+          color: #fff;
+          font-size: 24px;
+          text-align: center;
+          a{
+            color:white;
+          }
+        }
+        p {
+          font-family: "ProximaNova Lite";
+          color: gray;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

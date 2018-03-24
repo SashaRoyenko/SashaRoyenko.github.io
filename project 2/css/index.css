@@ -526,14 +526,26 @@ a {
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 350px; }
+    height: 350px;
+    position: relative; }
+    .portfolio_s .portfolio_bg1 img {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0; }
   .portfolio_s .portfolio_bg3 {
     background-image: url("../img/portfolio/project3.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 350px; }
+    height: 350px;
+    position: relative; }
+    .portfolio_s .portfolio_bg3 img {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0; }
   .portfolio_s .portfolio_bg2 {
     background-image: url("../img/portfolio/project2.png");
     background-repeat: no-repeat;
@@ -565,6 +577,53 @@ a {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     z-index: -1; }
+
+.about_us_s {
+  background-image: url("../img/about us/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh; }
+  .about_us_s .about_us_s__wrap {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; }
+    .about_us_s .about_us_s__wrap h4 {
+      margin-top: 100px;
+      margin-bottom: 30px;
+      font-family: "ProximaNova Bold";
+      color: #fff;
+      font-size: 48px; }
+    .about_us_s .about_us_s__wrap p {
+      font-family: "ProximaNova Lite";
+      color: gray;
+      font-size: 18px;
+      text-align: center;
+      width: 70%;
+      margin-bottom: 80px; }
+    .about_us_s .about_us_s__wrap ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around; }
+      .about_us_s .about_us_s__wrap ul li {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .about_us_s .about_us_s__wrap ul li h5 {
+          margin-top: 10px;
+          margin-bottom: 10px;
+          font-family: "ProximaNova Bold";
+          color: #fff;
+          font-size: 24px;
+          text-align: center; }
+          .about_us_s .about_us_s__wrap ul li h5 a {
+            color: white; }
+        .about_us_s .about_us_s__wrap ul li p {
+          font-family: "ProximaNova Lite";
+          color: gray;
+          font-size: 18px; }
 
 /**
  * 1. Change the default font family in all browsers (opinionated).

@@ -368,6 +368,15 @@ a {
     .nav li a {
       color: black; }
 
+footer iframe {
+  filter: grayscale(2); }
+footer p {
+  margin-top: 30px;
+  font-family: "ProximaNova Bold";
+  font-size: 18px;
+  text-align: center;
+  color: #a7acbc; }
+
 .container {
   max-width: 1140px;
   width: 100%;
@@ -449,7 +458,7 @@ a {
   justify-content: space-between;
   align-items: center; }
   .design_wrap .left_area, .design_wrap .right_area {
-    height: 370px;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center; }
@@ -603,7 +612,7 @@ a {
       font-size: 18px;
       text-align: center;
       width: 70%;
-      margin-bottom: 80px; }
+      margin-bottom: 70px; }
     .about_us_s .about_us_s__wrap ul {
       display: flex;
       flex-direction: row;
@@ -623,6 +632,17 @@ a {
           font-family: "ProximaNova Lite";
           color: gray;
           font-size: 18px; }
+    .about_us_s .about_us_s__wrap .btn {
+      margin-top: -20px; }
+
+footer iframe {
+  filter: grayscale(2); }
+footer p {
+  margin-top: 30px;
+  font-family: "ProximaNova Bold";
+  font-size: 18px;
+  text-align: center;
+  color: #a7acbc; }
 
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -1007,3 +1027,12 @@ a {
     font-size: 18px; }
     .nav li a {
       color: black; }
+
+footer iframe {
+  filter: grayscale(2); }
+footer p {
+  margin-top: 30px;
+  font-family: "ProximaNova Bold";
+  font-size: 18px;
+  text-align: center;
+  color: #a7acbc; }

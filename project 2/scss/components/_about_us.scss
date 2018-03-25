@@ -33,18 +33,36 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        h5 {
-          margin-top: 10px;
-          margin-bottom: 10px;
-          font-family: "ProximaNova Bold";
-          color: #fff;
-          font-size: 24px;
-          text-align: center;
-        }
         p {
           font-family: "ProximaNova Lite";
           color: gray;
           font-size: 18px;
+        }
+        a{
+          img{
+            transition: .5s;
+          }
+          h5 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-family: "ProximaNova Bold";
+            color: #fff;
+            font-size: 24px;
+            text-align: center;
+            transition: .5s;
+          }
+        }
+        a:hover{
+          img{
+            transition: .5s;
+            transform: scale(1.1);
+          }
+          h5 {
+            transition: .5s;
+            background: linear-gradient(90deg, #5F0587, #DD018C);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
         }
       }
     }

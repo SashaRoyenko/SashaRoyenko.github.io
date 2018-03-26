@@ -322,8 +322,10 @@ a {
     color: white; }
 
 @keyframes scroll {
-  50% {
-    top: 9px; } }
+  from {
+    transform: translate(-50%, 0); }
+  to {
+    transform: translate(-50%, 2px); } }
 @font-face {
   font-family: 'ProximaNova Bold';
   src: url("../fonts/ProximaNova-Bold.ttf") format("truetype");
@@ -660,8 +662,10 @@ input[type="submit"] {
   font-weight: normal;
   font-style: normal; }
 @keyframes scroll {
-  50% {
-    top: 9px; } }
+  from {
+    transform: translate(-50%, 0); }
+  to {
+    transform: translate(-50%, 2px); } }
 a {
   text-decoration: none; }
 
@@ -730,6 +734,12 @@ a {
       position: relative; }
       .nav li a:hover {
         color: white; }
+        @media only screen and (min-width: 768px) and (max-width: 1199px) {
+          .nav li a:hover {
+            color: black; } }
+        @media only screen and (max-width: 767px) {
+          .nav li a:hover {
+            color: black; } }
       .nav li a:before {
         position: absolute;
         bottom: 0;
@@ -743,6 +753,12 @@ a {
       content: '';
       width: 120%;
       z-index: -1; }
+      @media only screen and (min-width: 768px) and (max-width: 1199px) {
+        .nav li:hover a:before {
+          width: 0; } }
+      @media only screen and (max-width: 767px) {
+        .nav li:hover a:before {
+          width: 0; } }
 
 footer iframe {
   filter: grayscale(1); }
@@ -779,16 +795,16 @@ footer p {
   display: flex;
   flex-direction: column;
   align-items: center; }
-  @media only screen and (min-width: 768px) and (max-width: 1199px) {
-    .intro_s {
-      justify-content: center; } }
-  @media only screen and (max-width: 767px) {
-    .intro_s {
-      justify-content: center; } }
   .intro_s h1 {
     margin-top: 200px;
     font-family: 'ProximaNova Bold';
     font-size: 48px; }
+    @media only screen and (min-width: 768px) and (max-width: 1199px) {
+      .intro_s h1 {
+        margin-top: 600px; } }
+    @media only screen and (max-width: 767px) {
+      .intro_s h1 {
+        margin-top: 600px; } }
   .intro_s p {
     margin-top: 20px;
     font-family: "ProximaNova Regular";
@@ -809,10 +825,10 @@ footer p {
       height: 7px;
       border-radius: 5px;
       background-color: #343332;
+      top: 8px;
       left: 50%;
       transform: translateX(-50%);
-      top: 8px;
-      animation: scroll 1s linear infinite; }
+      animation: scroll 1s linear infinite alternate-reverse; }
     @media only screen and (min-width: 768px) and (max-width: 1199px) {
       .intro_s .mouse {
         display: none; } }
@@ -1050,11 +1066,27 @@ footer p {
         .about_us_s .about_us_s__wrap ul li a:hover img {
           transition: .5s;
           transform: scale(1.1); }
+          @media only screen and (min-width: 768px) and (max-width: 1199px) {
+            .about_us_s .about_us_s__wrap ul li a:hover img {
+              transform: none; } }
+          @media only screen and (max-width: 767px) {
+            .about_us_s .about_us_s__wrap ul li a:hover img {
+              transform: none; } }
         .about_us_s .about_us_s__wrap ul li a:hover h5 {
           transition: .5s;
           background: linear-gradient(90deg, #5F0587, #DD018C);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent; }
+          @media only screen and (min-width: 768px) and (max-width: 1199px) {
+            .about_us_s .about_us_s__wrap ul li a:hover h5 {
+              background: none;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: white; } }
+          @media only screen and (max-width: 767px) {
+            .about_us_s .about_us_s__wrap ul li a:hover h5 {
+              background: transparent;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: white; } }
     .about_us_s .about_us_s__wrap .btn {
       margin-top: -20px; }
 
@@ -1102,6 +1134,12 @@ footer p {
       position: relative; }
       .nav li a:hover {
         color: white; }
+        @media only screen and (min-width: 768px) and (max-width: 1199px) {
+          .nav li a:hover {
+            color: black; } }
+        @media only screen and (max-width: 767px) {
+          .nav li a:hover {
+            color: black; } }
       .nav li a:before {
         position: absolute;
         bottom: 0;
@@ -1115,6 +1153,12 @@ footer p {
       content: '';
       width: 120%;
       z-index: -1; }
+      @media only screen and (min-width: 768px) and (max-width: 1199px) {
+        .nav li:hover a:before {
+          width: 0; } }
+      @media only screen and (max-width: 767px) {
+        .nav li:hover a:before {
+          width: 0; } }
 
 footer iframe {
   filter: grayscale(1); }

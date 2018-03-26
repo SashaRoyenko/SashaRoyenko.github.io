@@ -33,6 +33,12 @@
            position: relative;
            &:hover{
              color:white;
+             @include res('tab'){
+               color:black;
+             }
+             @include res('mob'){
+               color:black;
+             }
            }
            &:before{
              position: absolute;
@@ -49,6 +55,12 @@
          content:'';
          width: 120%;
          z-index: -1;
+         @include res('tab'){
+           width: 0;
+         }
+         @include res('mob'){
+           width: 0;
+         }
        }
      }
 }

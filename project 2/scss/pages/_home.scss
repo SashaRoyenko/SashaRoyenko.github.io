@@ -1,3 +1,13 @@
+//Libs
+@import "../libs/reset";
+//Partials
+@import "../partials/fonts";
+@import "../partials/keyframes";
+@import "../partials/mixins";
+@import "../partials/variable";
+@import "../partials/mixins";
+@import "../components/media";
+
 //Components
 @import "../components/header.scss";
 @import"../components/footer.scss";
@@ -8,11 +18,3 @@
 @import "../components/portfolio";
 @import "../components/about_us";
 @import "../components/footer";
-//Libs
-@import "../libs/reset";
-//Partials
-@import "../partials/fonts";
-@import "../partials/keyframes";
-@import "../partials/mixins";
-@import "../partials/variable";
-@import "../partials/mixins";

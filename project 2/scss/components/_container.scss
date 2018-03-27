@@ -3,7 +3,12 @@
   width: 100%;
   margin: 0 auto;
   @include res('tab'){
-    max-width: 768px;
+    max-width: 850px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  @include res('tab-l'){
+    max-width: 900px;
     width: 100%;
     margin: 0 auto;
   }

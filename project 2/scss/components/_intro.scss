@@ -15,10 +15,16 @@
     font-family:'ProximaNova Bold';
     font-size: 48px;
     @include res('tab'){
-      margin-top: 600px;
+      margin-top: 450px;
+    }
+    @include res('tab-l'){
+      margin-top: 270px;
     }
     @include res('mob'){
-      margin-top: 600px;
+      margin-top: 520px;
+    }
+    @include res('mob-l'){
+      margin-top: 180px;
     }
   }
   p{
@@ -26,6 +32,9 @@
     font-family:"ProximaNova Regular";
     font-size: 18px;
     color:grey;
+    @include res('mob-l'){
+      color: #fff;
+    }
   }
   .btn{
     margin-top: 65px;
@@ -46,7 +55,7 @@
       top: 8px;
       left: 50%;
       transform: translateX(-50%);
-      animation: scroll 1s linear infinite alternate-reverse;
+      animation: scroll .5s linear infinite alternate-reverse;
     }
     @include res('tab'){
       display: none;

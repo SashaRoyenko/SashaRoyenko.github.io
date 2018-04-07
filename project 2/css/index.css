@@ -701,12 +701,15 @@ a {
     color: white; }
 
 .header_s {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding-top: 50px;
-  z-index: 999; }
+  height: 80px;
+  z-index: 999;
+  background-color: rgba(172, 177, 179, 0.7);
+  display: flex;
+  margin: auto; }
 
 .header_wrap {
   display: flex;
@@ -719,6 +722,9 @@ a {
   color: black; }
   .logo span:last-child {
     font-family: "ProximaNova Lite"; }
+  @media only screen and (max-width: 767px) {
+    .logo {
+      font-size: 30px; } }
 
 .nav {
   display: flex;
@@ -726,6 +732,13 @@ a {
   max-width: 430px;
   width: 100%;
   justify-content: space-between; }
+  @media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .nav {
+      max-width: 360px;
+      width: 100%; } }
+  @media only screen and (max-width: 767px) {
+    .nav {
+      display: none; } }
   .nav li {
     font-family: "ProximaNova Regular";
     font-size: 18px; }
@@ -760,6 +773,23 @@ a {
         .nav li:hover a:before {
           width: 0; } }
 
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer; }
+  @media only screen and (max-width: 767px) {
+    .hamburger {
+      display: flex; } }
+
+.line {
+  width: 30px;
+  height: 3px;
+  background: linear-gradient(90deg, #5F0587, #DD018C);
+  transition: .5s; }
+
+.line:nth-of-type(2) {
+  margin: 6px 0; }
+
 footer iframe {
   filter: grayscale(1); }
 footer p {
@@ -775,19 +805,26 @@ footer p {
   margin: 0 auto; }
   @media only screen and (min-width: 768px) and (max-width: 1199px) {
     .container {
-      max-width: 850px;
+      max-width: 730px;
       width: 100%;
-      margin: 0 auto; } }
+      margin: 0 auto;
+      padding: 0 15px; } }
   @media only screen and (min-width: 768px) and (max-width: 1199px) and (orientation: landscape) {
     .container {
       max-width: 900px;
       width: 100%;
-      margin: 0 auto; } }
+      margin: 0 auto;
+      padding: 0 15px; } }
   @media only screen and (max-width: 767px) {
     .container {
-      max-width: 450px;
       width: 100%;
-      margin: 0 auto; } }
+      margin: 0 auto;
+      padding: 0 15px; } }
+  @media only screen and (max-width: 767px) and (orientation: landscape) {
+    .container {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 15px; } }
 
 .intro_s {
   position: relative;
@@ -806,26 +843,33 @@ footer p {
     font-size: 48px; }
     @media only screen and (min-width: 768px) and (max-width: 1199px) {
       .intro_s h1 {
-        margin-top: 450px; } }
+        margin-top: 270px; } }
     @media only screen and (min-width: 768px) and (max-width: 1199px) and (orientation: landscape) {
       .intro_s h1 {
         margin-top: 270px; } }
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: 767px) and (orientation: portrait) {
       .intro_s h1 {
-        margin-top: 520px; } }
+        margin-top: 280px;
+        font-size: 22px; } }
     @media only screen and (max-width: 767px) and (orientation: landscape) {
       .intro_s h1 {
-        margin-top: 180px; } }
+        margin-top: 180px;
+        font-size: 28px; } }
   .intro_s p {
     margin-top: 20px;
     font-family: "ProximaNova Regular";
     font-size: 18px;
     color: grey; }
-    @media only screen and (max-width: 767px) and (orientation: landscape) {
+    @media only screen and (max-width: 767px) {
       .intro_s p {
-        color: #fff; } }
+        width: 90%;
+        font-size: 14px;
+        text-align: center; } }
   .intro_s .btn {
     margin-top: 65px; }
+    @media only screen and (max-width: 767px) {
+      .intro_s .btn {
+        margin-top: 45px; } }
   .intro_s .mouse {
     bottom: 50px;
     position: absolute;
@@ -875,6 +919,9 @@ footer p {
   background-size: cover;
   background-position: center;
   z-index: -1; }
+  @media only screen and (max-width: 767px) {
+    .design:before {
+      width: 100%; } }
 
 .design:after {
   content: '';
@@ -888,19 +935,32 @@ footer p {
   background-size: cover;
   background-position: center;
   z-index: -1; }
+  @media only screen and (max-width: 767px) {
+    .design:after {
+      width: 100%;
+      height: 400px; } }
 
 .design_wrap {
   display: flex;
   position: relative;
   justify-content: space-between;
   align-items: center; }
+  @media only screen and (max-width: 767px) {
+    .design_wrap {
+      flex-wrap: wrap; } }
   .design_wrap .left_area, .design_wrap .right_area {
     height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center; }
+    @media only screen and (max-width: 767px) {
+      .design_wrap .left_area, .design_wrap .right_area {
+        align-items: center; } }
   .design_wrap .right_area {
     margin-left: 135px; }
+    @media only screen and (max-width: 767px) {
+      .design_wrap .right_area {
+        margin-left: 0px; } }
   .design_wrap span {
     font-size: 48px;
     font-family: 'ProximaNova Lite';
@@ -913,6 +973,9 @@ footer p {
     font-size: 18px;
     font-family: 'ProximaNova Lite';
     color: white; }
+    @media only screen and (max-width: 767px) {
+      .design_wrap p {
+        text-align: center; } }
 
 .what_we_do_s {
   margin-top: 90px; }
@@ -921,6 +984,9 @@ footer p {
     justify-content: space-between;
     align-items: center;
     flex-direction: column; }
+    @media only screen and (max-width: 767px) {
+      .what_we_do_s .what_we_do__wrap {
+        justify-content: center; } }
     .what_we_do_s .what_we_do__wrap h4 {
       font-family: "ProximaNova Bold";
       font-size: 48px;
@@ -929,20 +995,36 @@ footer p {
       display: flex;
       justify-content: space-between;
       align-items: center; }
+      @media only screen and (max-width: 767px) {
+        .what_we_do_s .what_we_do__wrap div {
+          flex-direction: column;
+          justify-content: center;
+          align-content: center; } }
       .what_we_do_s .what_we_do__wrap div article {
         width: 100%;
         margin: 0;
         padding: 0; }
+        @media only screen and (max-width: 767px) {
+          .what_we_do_s .what_we_do__wrap div article {
+            margin: 20px 0; } }
         .what_we_do_s .what_we_do__wrap div article h5 {
           font-family: "ProximaNova Bold";
           font-size: 30px;
           color: black;
           margin-bottom: 35px; }
+          @media only screen and (max-width: 767px) {
+            .what_we_do_s .what_we_do__wrap div article h5 {
+              text-align: center;
+              margin-bottom: 30px; } }
         .what_we_do_s .what_we_do__wrap div article p {
           font-family: "ProximaNova Lite";
           font-size: 18px;
           color: gray;
           width: 80%; }
+          @media only screen and (max-width: 767px) {
+            .what_we_do_s .what_we_do__wrap div article p {
+              text-align: center;
+              width: 100%; } }
     .what_we_do_s .what_we_do__wrap img {
       margin-right: 30px; }
     .what_we_do_s .what_we_do__wrap div:nth-child(2) {
@@ -956,6 +1038,11 @@ footer p {
     .what_we_do_s .what_we_do__wrap div:nth-child(3) img:nth-child(1) {
       width: 107px;
       height: 102px; }
+      @media only screen and (max-width: 767px) {
+        .what_we_do_s .what_we_do__wrap div:nth-child(3) img:nth-child(1) {
+          width: 107px;
+          height: 102px;
+          margin-top: -82px; } }
     .what_we_do_s .what_we_do__wrap div:nth-child(3) img:nth-child(3) {
       width: 126px;
       height: 98px; }
@@ -966,6 +1053,9 @@ footer p {
 .portfolio_s {
   display: flex;
   margin-top: 90px; }
+  @media only screen and (max-width: 767px) {
+    .portfolio_s {
+      flex-direction: column; } }
   .portfolio_s .portfolio_bg1 {
     background-image: url("../img/portfolio/project1.png");
     background-repeat: no-repeat;
@@ -979,6 +1069,9 @@ footer p {
       top: 50%;
       transform: translateY(-50%);
       left: 0; }
+      @media only screen and (max-width: 767px) {
+        .portfolio_s .portfolio_bg1 img {
+          display: none; } }
   .portfolio_s .portfolio_bg3 {
     background-image: url("../img/portfolio/project3.png");
     background-repeat: no-repeat;
@@ -992,6 +1085,9 @@ footer p {
       top: 50%;
       transform: translateY(-50%);
       right: 0; }
+      @media only screen and (max-width: 767px) {
+        .portfolio_s .portfolio_bg3 img {
+          display: none; } }
   .portfolio_s .portfolio_bg2 {
     background-image: url("../img/portfolio/project2.png");
     background-repeat: no-repeat;
@@ -1030,13 +1126,16 @@ footer p {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 100vh; }
+  height: 100%;
+  padding: 50px; }
   @media only screen and (min-width: 768px) and (max-width: 1199px) {
     .about_us_s {
-      height: 700px; } }
+      height: 100%;
+      padding: 50px; } }
   @media only screen and (max-width: 767px) {
     .about_us_s {
-      height: 700px; } }
+      height: 100%;
+      padding: 50px; } }
   .about_us_s .about_us_s__wrap {
     display: flex;
     justify-content: center;
@@ -1059,6 +1158,9 @@ footer p {
       display: flex;
       flex-direction: row;
       justify-content: space-around; }
+      @media only screen and (max-width: 767px) {
+        .about_us_s .about_us_s__wrap ul {
+          flex-direction: column; } }
       .about_us_s .about_us_s__wrap ul li {
         display: flex;
         flex-direction: column;
@@ -1115,12 +1217,15 @@ footer p {
 
 /*COMPONENTS*/
 .header_s {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding-top: 50px;
-  z-index: 999; }
+  height: 80px;
+  z-index: 999;
+  background-color: rgba(172, 177, 179, 0.7);
+  display: flex;
+  margin: auto; }
 
 .header_wrap {
   display: flex;
@@ -1133,6 +1238,9 @@ footer p {
   color: black; }
   .logo span:last-child {
     font-family: "ProximaNova Lite"; }
+  @media only screen and (max-width: 767px) {
+    .logo {
+      font-size: 30px; } }
 
 .nav {
   display: flex;
@@ -1140,6 +1248,13 @@ footer p {
   max-width: 430px;
   width: 100%;
   justify-content: space-between; }
+  @media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .nav {
+      max-width: 360px;
+      width: 100%; } }
+  @media only screen and (max-width: 767px) {
+    .nav {
+      display: none; } }
   .nav li {
     font-family: "ProximaNova Regular";
     font-size: 18px; }
@@ -1173,6 +1288,23 @@ footer p {
       @media only screen and (max-width: 767px) {
         .nav li:hover a:before {
           width: 0; } }
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer; }
+  @media only screen and (max-width: 767px) {
+    .hamburger {
+      display: flex; } }
+
+.line {
+  width: 30px;
+  height: 3px;
+  background: linear-gradient(90deg, #5F0587, #DD018C);
+  transition: .5s; }
+
+.line:nth-of-type(2) {
+  margin: 6px 0; }
 
 footer iframe {
   filter: grayscale(1); }

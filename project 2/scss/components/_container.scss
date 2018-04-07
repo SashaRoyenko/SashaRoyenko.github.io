@@ -3,23 +3,25 @@
   width: 100%;
   margin: 0 auto;
   @include res('tab'){
-    max-width: 850px;
+    max-width: 730px;
     width: 100%;
     margin: 0 auto;
+    padding: 0 15px;
   }
   @include res('tab-l'){
     max-width: 900px;
     width: 100%;
     margin: 0 auto;
+    padding: 0 15px;
   }
   @include res('mob'){
-    max-width: 450px;
     width: 100%;
     margin: 0 auto;
+    padding: 0 15px;
+  }
+  @include res('mob-l'){
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
   }
 }
-//.portfolio_container{
-//  max-width: 1950px;
-//  width: 100%;
-//  margin: 0 auto;
-//}

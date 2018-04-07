@@ -1,10 +1,9 @@
 .portfolio_s{
   display: flex;
   margin-top: 90px;
-  //img{
-  //  width: 450px;
-  //  height: 100%;
-  //}
+  @include res('mob'){
+  flex-direction: column;
+  }
   .portfolio_bg1
   {
     background-image: url("../img/portfolio/project1.png");
@@ -19,6 +18,9 @@
       top:50%;
       transform: translateY(-50%);
       left: 0;
+      @include res('mob'){
+        display: none;
+      }
     }
   }
   .portfolio_bg3
@@ -35,6 +37,9 @@
       top:50%;
       transform: translateY(-50%);
       right: 0;
+      @include res('mob'){
+        display: none;
+      }
     }
   }
   .portfolio_bg2
@@ -51,10 +56,6 @@
     justify-content: center;
     align-items: center;
     z-index: 2;
-    //img{
-    //  position:absolute;
-    //  z-index: -1;
-    //}
       h5{
           font-family: "ProximaNova Bold";
         font-size: 30px;

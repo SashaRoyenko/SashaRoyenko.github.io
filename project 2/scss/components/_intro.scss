@@ -15,16 +15,18 @@
     font-family:'ProximaNova Bold';
     font-size: 48px;
     @include res('tab'){
-      margin-top: 450px;
+      margin-top: 270px;
     }
     @include res('tab-l'){
       margin-top: 270px;
     }
-    @include res('mob'){
-      margin-top: 520px;
+    @include res('mob-p'){
+      margin-top: 280px;
+      font-size: 22px;
     }
     @include res('mob-l'){
       margin-top: 180px;
+      font-size: 28px;
     }
   }
   p{
@@ -32,12 +34,17 @@
     font-family:"ProximaNova Regular";
     font-size: 18px;
     color:grey;
-    @include res('mob-l'){
-      color: #fff;
+    @include res('mob'){
+      width: 90%;
+      font-size: 14px;
+      text-align: center;
     }
   }
   .btn{
     margin-top: 65px;
+    @include res('mob'){
+      margin-top: 45px;
+    }
   }
   .mouse{
       bottom:50px;

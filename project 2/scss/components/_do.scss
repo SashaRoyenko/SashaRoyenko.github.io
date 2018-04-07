@@ -5,6 +5,9 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    @include res('mob'){
+      justify-content: center;
+    }
     h4 {
       font-family: "ProximaNova Bold";
       font-size: 48px;
@@ -14,21 +17,37 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      @include res('mob'){
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+      }
       article {
         width: 100%;
         margin: 0;
         padding: 0;
+        @include res('mob'){
+          margin: 20px 0;
+        }
         h5 {
           font-family: "ProximaNova Bold";
           font-size: 30px;
           color: black;
           margin-bottom: 35px;
+          @include res('mob'){
+            text-align: center;
+            margin-bottom: 30px;
+          }
         }
         p {
           font-family: "ProximaNova Lite";
           font-size: 18px;
           color: gray;
           width: 80%;
+          @include res('mob'){
+            text-align: center;
+            width: 100%;
+          }
         }
       }
     }
@@ -50,6 +69,11 @@
       img:nth-child(1) {
         width: 107px;
         height: 102px;
+        @include res('mob'){
+          width: 107px;
+          height: 102px;
+          margin-top: -82px;
+        }
       }
       img:nth-child(3) {
         width: 126px;

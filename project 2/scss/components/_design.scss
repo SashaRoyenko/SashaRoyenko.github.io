@@ -11,6 +11,9 @@
   background-size: cover;
   background-position: center;
   z-index: -1;
+  @include res('mob'){
+    width: 100%;
+  }
 }
 .design:after{
   content:'';
@@ -24,20 +27,33 @@
   background-size: cover;
   background-position: center;
   z-index: -1;
+  @include res('mob'){
+    width: 100%;
+    height: 400px;
+  }
 }
 .design_wrap{
   display: flex;
   position: relative;
   justify-content:space-between;
   align-items: center;
+  @include res('mob'){
+    flex-wrap: wrap;
+  }
   .left_area, .right_area{
     height:400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @include res('mob'){
+      align-items: center;
+    }
   }
   .right_area{
     margin-left: 135px;
+	 @include res('mob'){
+		 margin-left: 0px;
+  }
   }
   span{
     font-size: 48px;
@@ -53,5 +69,8 @@
     font-size: 18px;
     font-family: 'ProximaNova Lite';
     color:white;
+    @include res('mob'){
+      text-align: center;
+    }
   }
 }

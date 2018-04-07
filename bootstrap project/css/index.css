@@ -373,8 +373,7 @@ footer p {
       width: 80%; }
     .intro_s .intro_s__wrap article .btn {
       width: 170px;
-      height: 50px;
-      line-height: 50px;
+      line-height: 35px;
       border-radius: 3px;
       background-color: #998675;
       box-shadow: 0 3px #736357; }

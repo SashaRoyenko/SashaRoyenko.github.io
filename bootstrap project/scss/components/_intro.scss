@@ -1,0 +1,63 @@
+.intro_s{
+  background-image: url("../img/intro/intro_bg.png");
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  .intro_s__wrap {
+    article {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      h1, h2, p {
+        color: white;
+      }
+      h2 {
+        font-size: 36px;
+        font-family: "Raleway Medium";
+      }
+      h1 {
+        font-size: 52px;
+        font-family: "Raleway ExtraBol";
+      }
+      p {
+        font-size: 16px;
+        font-family: "Monstserrat Light";
+        width: 80%;
+      }
+      .btn{
+        width: 170px;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 3px;
+        background-color: #998675;
+        box-shadow: 0 3px #736357;
+        a{
+          color: white;
+          text-align: center;
+          text-transform: uppercase;
+          font-family: "Raleway ExtraBold";
+          font-size: 14px;
+          text-decoration: none;
+
+        }
+      }
+      .slider_img{
+        transition: .5s;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        .left_arrow{
+          position: absolute;
+          left: -500px;
+        }
+        .right_arrow{
+          position: absolute;
+         right: -500px;
+        }
+      }
+    }
+  }
+}

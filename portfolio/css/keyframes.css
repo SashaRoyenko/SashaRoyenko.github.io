@@ -1,0 +1,14 @@
+/*Keyframes*/
+@keyframes rotate {
+    from{transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+@keyframes jump {
+    from, to{
+        bottom:50px;
+    }
+    50%{
+        bottom:60px;
+    }
+}
+/*//KEYFRAMES*/

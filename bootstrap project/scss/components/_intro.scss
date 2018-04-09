@@ -4,6 +4,7 @@
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
   top: 0;
   .intro_s__wrap {
@@ -27,21 +28,6 @@
         font-size: 16px;
         font-family: "Monstserrat Light";
         width: 80%;
-      }
-      .btn{
-        width: 170px;
-        line-height: 35px;
-        border-radius: 3px;
-        background-color: #998675;
-        box-shadow: 0 3px #736357;
-        a{
-          color: white;
-          text-align: center;
-          text-transform: uppercase;
-          font-family: "Raleway ExtraBold";
-          font-size: 14px;
-          text-decoration: none;
-        }
       }
       .slider_img{
         transition: .5s;

@@ -1,0 +1,40 @@
+.service_s{
+  position: relative;
+  margin-top: 90px;
+  .service_s__wrap{
+    ul{
+      li{
+        position: relative;
+        transition: .5s;
+        a{
+          text-decoration: none;
+        }
+        h4{
+          font-size:23px;
+          font-family: "Raleway SemiBold";
+          color:#555555;
+          margin: 30px 0;
+        }
+        p{
+          font-size: 14px;
+          font-family: "Monstserrat Light";
+          color: #8c8c8c;
+          width: 90%;
+        }
+        &::after{
+          transition: .5s;
+          content: '';
+          margin-top: 35px;
+          height: 3px;
+          width: 70px;
+          background-color: #F1EEE9;
+        }
+        &:hover{
+          &::after{
+            background-color: #C7B299;
+          }
+        }
+      }
+    }
+  }
+}

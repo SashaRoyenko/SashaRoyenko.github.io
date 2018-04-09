@@ -5,6 +5,7 @@
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+  top: 0;
   .intro_s__wrap {
     article {
       position: absolute;
@@ -53,7 +54,7 @@
         }
         .right_arrow{
           position: absolute;
-         right: -500px;
+          right: -500px;
         }
       }
     }

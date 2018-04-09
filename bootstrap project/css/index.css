@@ -60,7 +60,8 @@ a {
   background-color: transparent;
   /* 1 */
   -webkit-text-decoration-skip: objects;
-  /* 2 */ }
+  /* 2 */
+  text-decoration: none; }
 
 /**
  * Remove the outline on focused links when they are also active or hovered
@@ -308,6 +309,11 @@ input[type="submit"] {
   font-weight: normal;
   font-style: normal; }
 @font-face {
+  font-family: 'Raleway SemiBold';
+  src: url("../fonts/Raleway-SemiBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
   font-family: 'Raleway Medium';
   src: url("../fonts/Raleway-Medium.ttf") format("truetype");
   font-weight: normal;
@@ -322,21 +328,19 @@ input[type="submit"] {
   src: url("../fonts/Monstserrat-Light.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
-a {
-  text-decoration: none; }
-
-a {
-  text-decoration: none; }
-
-.header_wrap h3 {
-  color: white;
-  font-size: 34px;
-  font-family: "Raleway Regular"; }
-.header_wrap li a {
-  color: #fff;
-  font-size: 14px;
-  font-family: 'Monstserrat Light';
-  text-decoration: none; }
+.header_s {
+  width: 100%;
+  height: auto;
+  background-color: rgba(73, 71, 66, 0.6); }
+  .header_s .header_wrap h3 {
+    color: white;
+    font-size: 34px;
+    font-family: "Raleway Regular"; }
+  .header_s .header_wrap li a {
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Monstserrat Light';
+    text-decoration: none; }
 
 footer iframe {
   filter: grayscale(1); }
@@ -353,7 +357,8 @@ footer p {
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
-  position: relative; }
+  position: relative;
+  top: 0; }
   .intro_s .intro_s__wrap article {
     position: absolute;
     top: 50%;
@@ -395,3 +400,31 @@ footer p {
       .intro_s .intro_s__wrap article .slider_img .right_arrow {
         position: absolute;
         right: -500px; }
+
+.service_s {
+  position: relative;
+  margin-top: 90px; }
+  .service_s .service_s__wrap ul li {
+    position: relative;
+    transition: .5s; }
+    .service_s .service_s__wrap ul li a {
+      text-decoration: none; }
+    .service_s .service_s__wrap ul li h4 {
+      font-size: 23px;
+      font-family: "Raleway SemiBold";
+      color: #555555;
+      margin: 30px 0; }
+    .service_s .service_s__wrap ul li p {
+      font-size: 14px;
+      font-family: "Monstserrat Light";
+      color: #8c8c8c;
+      width: 90%; }
+    .service_s .service_s__wrap ul li::after {
+      transition: .5s;
+      content: '';
+      margin-top: 35px;
+      height: 3px;
+      width: 70px;
+      background-color: #F1EEE9; }
+    .service_s .service_s__wrap ul li:hover::after {
+      background-color: #C7B299; }

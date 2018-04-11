@@ -1,0 +1,10 @@
+.service_s {
+  position: relative; }
+  .service_s .service_s__wrap ul li h4 {
+    font-size: 23px;
+    font-family: "Raleway SemiBold";
+    color: #555555; }
+  .service_s .service_s__wrap ul li p {
+    font-size: 12px;
+    font-family: "Monstserrat Light";
+    color: #8c8c8c; }

@@ -359,7 +359,6 @@ input[type="submit"] {
     text-decoration: none; }
 
 .header_s {
-  width: 100%;
   height: auto;
   background-color: rgba(73, 71, 66, 0.6); }
   .header_s .header_wrap h3 {
@@ -470,9 +469,9 @@ footer p {
       transform: translateX(-50%);
       z-index: 1; }
     .motto_s .motto_s__wrap .motto_slider .motto_slider_right_bg {
-      right: -40px; }
+      right: 0; }
     .motto_s .motto_s__wrap .motto_slider .motto_slider_left_bg {
-      left: -40px; }
+      left: 0; }
   .motto_s .multipurpose {
     width: 100%;
     height: 150px;
@@ -487,3 +486,52 @@ footer p {
       font-family: "Monstserrat Light";
       font-size: 18px;
       color: #615855; }
+
+.project_s {
+  margin-top: 85px; }
+  .project_s .project_s__wrap h3 {
+    font-family: "Raleway SemiBold";
+    font-size: 30px;
+    color: #555555; }
+  .project_s .project_s__wrap p {
+    font-family: "Monstserrat Light";
+    font-size: 16px;
+    color: #8c8c8c;
+    width: 70%;
+    text-align: center; }
+  .project_s .project_s__wrap .our_projects {
+    margin-top: 40px; }
+    .project_s .project_s__wrap .our_projects li {
+      position: relative; }
+      .project_s .project_s__wrap .our_projects li img:first-child {
+        width: 100%; }
+      .project_s .project_s__wrap .our_projects li .project_description {
+        position: relative;
+        background-color: #FBFAF8;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%; }
+        .project_s .project_s__wrap .our_projects li .project_description .project_description_arrow {
+          position: absolute;
+          transform: translateY(-150%);
+          left: 15px;
+          width: 30px; }
+        .project_s .project_s__wrap .our_projects li .project_description h4 {
+          margin-top: 30px;
+          font-family: "Raleway Medium";
+          font-size: 20px;
+          color: #c7b299; }
+        .project_s .project_s__wrap .our_projects li .project_description h5 {
+          font-family: "Monstserrat Light";
+          font-size: 14px;
+          color: #d1d1d1;
+          margin-bottom: 60px; }
+    .project_s .project_s__wrap .our_projects .project_hover {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+      .project_s .project_s__wrap .our_projects .project_hover img {
+        display: none; }

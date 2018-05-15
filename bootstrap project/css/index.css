@@ -693,3 +693,44 @@ footer p {
     font-family: "Monstserrat Light";
     font-size: 16px;
     color: #c7b299; }
+
+.mob_devices_s {
+  height: 100vh;
+  position: relative; }
+  .mob_devices_s .mob_devices_s__wrap div {
+    position: relative;
+    bottom: 0;
+    height: 100vh; }
+    .mob_devices_s .mob_devices_s__wrap div img {
+      width: 423px;
+      height: 616px;
+      position: absolute;
+      bottom: 0; }
+  .mob_devices_s .mob_devices_s__wrap article h5 {
+    font-family: "Raleway SemiBold";
+    font-size: 30px;
+    color: #555555; }
+  .mob_devices_s .mob_devices_s__wrap article p {
+    font-family: "Monstserrat Light";
+    font-size: 16px;
+    color: #8c8c8c;
+    text-align: left;
+    margin-top: 40px; }
+  .mob_devices_s .mob_devices_s__wrap article ul {
+    margin-top: 60px;
+    margin-left: 50px; }
+    .mob_devices_s .mob_devices_s__wrap article ul li {
+      font-family: "Monstserrat Light";
+      margin-bottom: 20px;
+      font-size: 16px;
+      color: #8c8c8c;
+      position: relative;
+      padding-left: 30px; }
+      .mob_devices_s .mob_devices_s__wrap article ul li::before {
+        content: '';
+        background: url(../img/mobile/list_arrow.png) no-repeat;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 2px;
+        left: -25px; }

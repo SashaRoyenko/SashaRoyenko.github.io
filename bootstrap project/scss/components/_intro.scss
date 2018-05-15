@@ -13,34 +13,75 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
+      width: 100%;
+      @include res('mob'){
+        top: 40%;
+      }
       h1, h2, p {
         color: white;
       }
       h2 {
         font-size: 36px;
         font-family: "Raleway Medium";
+        @include res('mob'){
+          font-size: 22px;
+        }
       }
       h1 {
         font-size: 52px;
         font-family: "Raleway ExtraBol";
+        @include res('mob'){
+          font-size: 32px;
+          margin: 10px 0;
+        }
       }
       p {
         font-size: 16px;
         font-family: "Monstserrat Light";
-        width: 80%;
-      }
-      .slider_img{
-        transition: .5s;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        .left_arrow{
-          position: absolute;
-          left: -500px;
+        width: 40%;
+        @include res('tab'){
+          width: 60%;
         }
-        .right_arrow{
-          position: absolute;
-          right: -500px;
+        @include res('mob'){
+          width: 90%;
+        }
+      }
+    }
+    .slider_img{
+      width: 100%;
+      transition: .5s;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @include res('mob'){
+        display: none;
+      }
+      .right_arrow,.left_arrow{
+        position: absolute;
+        .icon_color{
+          transition: .3s;
+          fill:#A4A3A1;
+        }
+        @include res('desk-min') {
+          &:hover{
+            .icon_color {
+              transition: .3s;
+              fill: $main_color;
+            }
+          }
+        }
+      }
+      .left_arrow{
+        left: 50px;
+        @include res('tab'){
+          left: 40px;
+        }
+      }
+      .right_arrow{
+        right:50px;
+        @include res('tab'){
+          right: 40px;
         }
       }
     }

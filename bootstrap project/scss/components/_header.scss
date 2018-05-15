@@ -1,6 +1,8 @@
 .header_s {
   height: auto;
-  background-color: rgba(73, 71, 66, .6);
+  a{
+    text-decoration: none;
+  }
   .header_wrap {
     h3 {
       color: white;
@@ -9,9 +11,35 @@
     }
     li a {
       color: #fff;
-      font-size: 14px;
+      font-size: 15px;
       font-family: 'Monstserrat Light';
       text-decoration: none;
+      transition: .5s;
+      @include res('desk-min'){
+        &:hover{
+          color:#C7B299;
+        }
+        &:focus{
+          color:#C7B299;
+        }
+      }
+    }
+    .header_nav{
+      width: 100%;
+    }
+    .header_icon li a{
+      .icon_color{
+        transition: .5s;
+      }
+      &:hover{
+        .icon_color{
+          transition: .5s;
+          fill: $main_color;
+        }
+      }
     }
   }
+}
+.header_s--a{
+  background-color: rgba(73, 71, 66, .8);
 }

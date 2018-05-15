@@ -1,0 +1,49 @@
+.video_s{
+  background-image: url("../img/video_present/video_present_bg.png");
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 80px;
+  .video_s__wrap{
+    article{
+      .play_svg{
+        .play_bg{
+          flood-color:rgb(255, 255, 255);
+          opacity: 0.2;
+        }
+        .play_color{
+          fill:rgb(255, 255, 255);
+          transition: .5s;
+        }
+        &:hover{
+          .play_color{
+            fill: $main_color;
+          }
+        }
+      }
+
+      h4{
+        margin-top: 40px;
+        font-family: "Raleway Medium";
+        font-size: 45px;
+        color: #fff;
+      }
+      p{
+        font-family: "Monstserrat Light";
+        font-size: 20px;
+        width: 70%;
+        color: #fff;
+        margin-top: 30px;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+      span{
+        font-family: "Monstserrat Light";
+        font-size: 16px;
+        color:#c7b299;
+      }
+    }
+  }
+}

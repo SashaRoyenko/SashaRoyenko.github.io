@@ -13,6 +13,32 @@
       width: 70%;
       text-align: center;
     }
+    .project_s_btn__wrap {
+      margin-top: 45px;
+      .project_s_btn{
+        width: 150px;
+        //height: 30px;
+        border: 1px solid #EBEBEB;
+        line-height: 27px;
+        text-align: center;
+        transition: .6s;
+        a {
+          color: #8C8C8C;
+          font-family: "Monstserrat Light";
+          font-size: 14px;
+          text-decoration: none;
+        }
+        &:first-child {
+          width: 70px;
+        }
+        &:hover{
+          background-color: #998675;
+          a{
+            color:white;
+          }
+        }
+      }
+    }
     .our_projects {
       margin-top: 40px;
       li {
@@ -21,6 +47,7 @@
           width: 100%;
         }
         .project_description {
+          margin-top: -5px;
           position: relative;
           background-color: #FBFAF8;
           display: flex;
@@ -30,7 +57,7 @@
           height: 100%;
           .project_description_arrow {
             position: absolute;
-            transform:translateY(-150%);
+            transform:translateY(-100%);
             left: 15px;
             width: 30px;
           }

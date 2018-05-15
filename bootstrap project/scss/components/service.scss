@@ -14,12 +14,18 @@
           font-family: "Raleway SemiBold";
           color:#555555;
           margin: 30px 0;
+          @include res('tab'){
+            font-size: 16px;
+          }
         }
         p{
           font-size: 14px;
           font-family: "Monstserrat Light";
           color: #8c8c8c;
           width: 90%;
+          @include res('tab'){
+            font-size: 12px;
+          }
         }
         &::after{
           transition: .5s;
@@ -29,9 +35,11 @@
           width: 70px;
           background-color: #F1EEE9;
         }
-        &:hover{
-          &::after{
-            background-color: #C7B299;
+        @include res('desk-min'){
+          &:hover {
+            &::after {
+              background-color: #C7B299;
+            }
           }
         }
       }

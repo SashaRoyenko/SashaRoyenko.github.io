@@ -328,14 +328,34 @@ input[type="submit"] {
   src: url("../fonts/Monstserrat-Light.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
+body {
+  overflow-x: hidden; }
+
 .project_btn {
+  position: relative;
   width: 170px;
   height: 50px;
   line-height: 50px;
   border-radius: 3px;
   background-color: #998675;
-  box-shadow: 0 3px #736357;
+  z-index: 2;
   text-align: center; }
+  .project_btn::after {
+    content: '';
+    position: absolute;
+    background-color: #736357;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transition: .5s;
+    border-radius: 3px;
+    z-index: -1; }
+  @media only screen and (min-width: 1200px) {
+    .project_btn:hover::after {
+      content: '';
+      transition: .5s;
+      height: 90%; } }
   .project_btn a {
     color: white;
     text-transform: uppercase;
@@ -343,33 +363,76 @@ input[type="submit"] {
     font-size: 14px;
     text-decoration: none; }
 
+.icon_color {
+  fill: white; }
+
+body {
+  overflow-x: hidden; }
+
 .project_btn {
+  position: relative;
   width: 170px;
   height: 50px;
   line-height: 50px;
   border-radius: 3px;
   background-color: #998675;
-  box-shadow: 0 3px #736357;
+  z-index: 2;
   text-align: center; }
+  .project_btn::after {
+    content: '';
+    position: absolute;
+    background-color: #736357;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transition: .5s;
+    border-radius: 3px;
+    z-index: -1; }
+  @media only screen and (min-width: 1200px) {
+    .project_btn:hover::after {
+      content: '';
+      transition: .5s;
+      height: 90%; } }
   .project_btn a {
     color: white;
     text-transform: uppercase;
     font-family: "Raleway ExtraBold";
     font-size: 14px;
     text-decoration: none; }
+
+.icon_color {
+  fill: white; }
 
 .header_s {
-  height: auto;
-  background-color: rgba(73, 71, 66, 0.6); }
+  height: auto; }
+  .header_s a {
+    text-decoration: none; }
   .header_s .header_wrap h3 {
     color: white;
     font-size: 34px;
     font-family: "Raleway Regular"; }
   .header_s .header_wrap li a {
     color: #fff;
-    font-size: 14px;
+    font-size: 15px;
     font-family: 'Monstserrat Light';
-    text-decoration: none; }
+    text-decoration: none;
+    transition: .5s; }
+    @media only screen and (min-width: 1200px) {
+      .header_s .header_wrap li a:hover {
+        color: #C7B299; }
+      .header_s .header_wrap li a:focus {
+        color: #C7B299; } }
+  .header_s .header_wrap .header_nav {
+    width: 100%; }
+  .header_s .header_wrap .header_icon li a .icon_color {
+    transition: .5s; }
+  .header_s .header_wrap .header_icon li a:hover .icon_color {
+    transition: .5s;
+    fill: #C7B299; }
+
+.header_s--a {
+  background-color: rgba(73, 71, 66, 0.8); }
 
 footer iframe {
   filter: grayscale(1); }
@@ -393,30 +456,64 @@ footer p {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    width: 100%; }
+    @media only screen and (max-width: 767px) {
+      .intro_s .intro_s__wrap article {
+        top: 40%; } }
     .intro_s .intro_s__wrap article h1, .intro_s .intro_s__wrap article h2, .intro_s .intro_s__wrap article p {
       color: white; }
     .intro_s .intro_s__wrap article h2 {
       font-size: 36px;
       font-family: "Raleway Medium"; }
+      @media only screen and (max-width: 767px) {
+        .intro_s .intro_s__wrap article h2 {
+          font-size: 22px; } }
     .intro_s .intro_s__wrap article h1 {
       font-size: 52px;
       font-family: "Raleway ExtraBol"; }
+      @media only screen and (max-width: 767px) {
+        .intro_s .intro_s__wrap article h1 {
+          font-size: 32px;
+          margin: 10px 0; } }
     .intro_s .intro_s__wrap article p {
       font-size: 16px;
       font-family: "Monstserrat Light";
-      width: 80%; }
-    .intro_s .intro_s__wrap article .slider_img {
-      transition: .5s;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%); }
-      .intro_s .intro_s__wrap article .slider_img .left_arrow {
-        position: absolute;
-        left: -500px; }
-      .intro_s .intro_s__wrap article .slider_img .right_arrow {
-        position: absolute;
-        right: -500px; }
+      width: 40%; }
+      @media only screen and (min-width: 768px) and (max-width: 1199px) {
+        .intro_s .intro_s__wrap article p {
+          width: 60%; } }
+      @media only screen and (max-width: 767px) {
+        .intro_s .intro_s__wrap article p {
+          width: 90%; } }
+  .intro_s .intro_s__wrap .slider_img {
+    width: 100%;
+    transition: .5s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); }
+    @media only screen and (max-width: 767px) {
+      .intro_s .intro_s__wrap .slider_img {
+        display: none; } }
+    .intro_s .intro_s__wrap .slider_img .right_arrow, .intro_s .intro_s__wrap .slider_img .left_arrow {
+      position: absolute; }
+      .intro_s .intro_s__wrap .slider_img .right_arrow .icon_color, .intro_s .intro_s__wrap .slider_img .left_arrow .icon_color {
+        transition: .3s;
+        fill: #A4A3A1; }
+      @media only screen and (min-width: 1200px) {
+        .intro_s .intro_s__wrap .slider_img .right_arrow:hover .icon_color, .intro_s .intro_s__wrap .slider_img .left_arrow:hover .icon_color {
+          transition: .3s;
+          fill: #C7B299; } }
+    .intro_s .intro_s__wrap .slider_img .left_arrow {
+      left: 50px; }
+      @media only screen and (min-width: 768px) and (max-width: 1199px) {
+        .intro_s .intro_s__wrap .slider_img .left_arrow {
+          left: 40px; } }
+    .intro_s .intro_s__wrap .slider_img .right_arrow {
+      right: 50px; }
+      @media only screen and (min-width: 768px) and (max-width: 1199px) {
+        .intro_s .intro_s__wrap .slider_img .right_arrow {
+          right: 40px; } }
 
 .service_s {
   position: relative;
@@ -431,11 +528,17 @@ footer p {
       font-family: "Raleway SemiBold";
       color: #555555;
       margin: 30px 0; }
+      @media only screen and (min-width: 768px) and (max-width: 1199px) {
+        .service_s .service_s__wrap ul li h4 {
+          font-size: 16px; } }
     .service_s .service_s__wrap ul li p {
       font-size: 14px;
       font-family: "Monstserrat Light";
       color: #8c8c8c;
       width: 90%; }
+      @media only screen and (min-width: 768px) and (max-width: 1199px) {
+        .service_s .service_s__wrap ul li p {
+          font-size: 12px; } }
     .service_s .service_s__wrap ul li::after {
       transition: .5s;
       content: '';
@@ -443,8 +546,9 @@ footer p {
       height: 3px;
       width: 70px;
       background-color: #F1EEE9; }
-    .service_s .service_s__wrap ul li:hover::after {
-      background-color: #C7B299; }
+    @media only screen and (min-width: 1200px) {
+      .service_s .service_s__wrap ul li:hover::after {
+        background-color: #C7B299; } }
 
 .motto_s {
   margin-top: 165px; }
@@ -499,6 +603,25 @@ footer p {
     color: #8c8c8c;
     width: 70%;
     text-align: center; }
+  .project_s .project_s__wrap .project_s_btn__wrap {
+    margin-top: 45px; }
+    .project_s .project_s__wrap .project_s_btn__wrap .project_s_btn {
+      width: 150px;
+      border: 1px solid #EBEBEB;
+      line-height: 27px;
+      text-align: center;
+      transition: .6s; }
+      .project_s .project_s__wrap .project_s_btn__wrap .project_s_btn a {
+        color: #8C8C8C;
+        font-family: "Monstserrat Light";
+        font-size: 14px;
+        text-decoration: none; }
+      .project_s .project_s__wrap .project_s_btn__wrap .project_s_btn:first-child {
+        width: 70px; }
+      .project_s .project_s__wrap .project_s_btn__wrap .project_s_btn:hover {
+        background-color: #998675; }
+        .project_s .project_s__wrap .project_s_btn__wrap .project_s_btn:hover a {
+          color: white; }
   .project_s .project_s__wrap .our_projects {
     margin-top: 40px; }
     .project_s .project_s__wrap .our_projects li {
@@ -506,6 +629,7 @@ footer p {
       .project_s .project_s__wrap .our_projects li img:first-child {
         width: 100%; }
       .project_s .project_s__wrap .our_projects li .project_description {
+        margin-top: -5px;
         position: relative;
         background-color: #FBFAF8;
         display: flex;
@@ -515,7 +639,7 @@ footer p {
         height: 100%; }
         .project_s .project_s__wrap .our_projects li .project_description .project_description_arrow {
           position: absolute;
-          transform: translateY(-150%);
+          transform: translateY(-100%);
           left: 15px;
           width: 30px; }
         .project_s .project_s__wrap .our_projects li .project_description h4 {
@@ -535,3 +659,37 @@ footer p {
       transform: translate(-50%, -50%); }
       .project_s .project_s__wrap .our_projects .project_hover img {
         display: none; }
+
+.video_s {
+  background-image: url("../img/video_present/video_present_bg.png");
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 80px; }
+  .video_s .video_s__wrap article .play_svg .play_bg {
+    flood-color: white;
+    opacity: 0.2; }
+  .video_s .video_s__wrap article .play_svg .play_color {
+    fill: white;
+    transition: .5s; }
+  .video_s .video_s__wrap article .play_svg:hover .play_color {
+    fill: #C7B299; }
+  .video_s .video_s__wrap article h4 {
+    margin-top: 40px;
+    font-family: "Raleway Medium";
+    font-size: 45px;
+    color: #fff; }
+  .video_s .video_s__wrap article p {
+    font-family: "Monstserrat Light";
+    font-size: 20px;
+    width: 70%;
+    color: #fff;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    text-align: center; }
+  .video_s .video_s__wrap article span {
+    font-family: "Monstserrat Light";
+    font-size: 16px;
+    color: #c7b299; }

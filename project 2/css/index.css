@@ -776,7 +776,8 @@ a {
 .hamburger {
   display: none;
   flex-direction: column;
-  cursor: pointer; }
+  cursor: pointer;
+  margin-top: 40px; }
   @media only screen and (max-width: 767px) {
     .hamburger {
       display: flex; } }
@@ -1292,7 +1293,8 @@ footer p {
 .hamburger {
   display: none;
   flex-direction: column;
-  cursor: pointer; }
+  cursor: pointer;
+  margin-top: 40px; }
   @media only screen and (max-width: 767px) {
     .hamburger {
       display: flex; } }

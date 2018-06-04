@@ -820,7 +820,7 @@ footer p {
     display: flex;
     justify-content: center; }
     .post_s .post_s__wrap .second_slider_nav .second_slider_next, .post_s .post_s__wrap .second_slider_nav .second_slider_prev {
-      fill: grey;
+      fill: #D1D1D1;
       cursor: pointer;
       transition: .5s; }
       .post_s .post_s__wrap .second_slider_nav .second_slider_next:hover, .post_s .post_s__wrap .second_slider_nav .second_slider_prev:hover {

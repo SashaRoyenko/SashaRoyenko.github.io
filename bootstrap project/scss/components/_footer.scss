@@ -1,12 +1,144 @@
 footer{
-  iframe{
-    filter:grayscale(1);
+  background-color: #191919;
+  padding: 80px 0 100px 0;
+  .footer_wrap{
+    display: flex;
+    flex-direction: row;
+    article{
+      display: flex;
+      flex-direction: column;
+      div{
+        margin-bottom: 30px;
+        svg{
+          fill:#fff;
+        }
+        display: flex;
+        flex-direction: row;
+      }
+      h4{
+        font-family: "Raleway Regular";
+        font-size: 34px;
+        color: #fff;
+        white-space: nowrap;
+      }
+      p{
+        font-family: "Monstserrat Light";
+        font-size: 14px;
+        color:#555555;
+      }
+      h6{
+        font-family: "Monstserrat Light";
+        font-size: 12px;
+        color:#363636;
+      }
+      .network--color{
+        color: #00bff3;
+        text-decoration: none;
+      }
+      .footer--link{
+        color: #959595;
+        text-decoration: none;
+      }
+
+    }
+  }
+}
+.line{
+  position: relative;
+  &::after{
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    height: 1px;
+    width: 100%;
+    background: #252525;
+    left: 0;
+  }
+}
+.footer-post--article{
+  h6{
+    margin-top: 30px;
   }
   p{
+    margin-top: 15px;
+  }
+  a{
+    text-decoration: none;
+    transition: .5s;
+    &:hover{
+      h6{
+        color:#ffffff;
+      }
+      p{
+        color:#c7b299;
+      }
+    }
+  }
+}
+.footer-social-networks--article{
+  p{
     margin-top: 30px;
-    font-family: "ProximaNova Bold";
-    font-size: 18px;
-    text-align: center;
-    color:#a7acbc;
+    margin-bottom: 15px;
+  }
+  h6{
+
+  }
+}
+.footer-widget--article{
+  h4{
+    margin-bottom: 30px;
+  }
+  div{
+    &:last-child{
+      margin-top: -20px;
+    }
+    img{
+      &:first-child{
+        margin-right: 10px;
+      }
+    }
+  }
+}
+.footer-bottom{
+  background-color: #111111;
+  padding: 20px 0;
+  .footer-bottom--wrap{
+    ul{
+      display: flex;
+      flex-direction: row;
+      li,a{
+        font-family: "Monstserrat Light";
+        font-size: 13px;
+        color:#555555;
+        span{
+          color:#959595;
+        }
+        a{
+          text-decoration: none;
+          transition: .5s;
+          &:hover{
+            color:#c7b299;
+          }
+        }
+      }
+      li{
+        position: relative;
+        margin-left: 20px;
+        &:first-child{
+          margin-left: 0;
+        }
+        &::before{
+          content:'';
+          position: absolute;
+          right: -10px;
+          width: 1px;
+          height: 15px;
+          background: #252525;
+        }
+        &:last-child::before{
+          display: none;
+        }
+      }
+    }
   }
 }
